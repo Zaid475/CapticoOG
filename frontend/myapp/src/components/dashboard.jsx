@@ -9,10 +9,8 @@ const Dashboard = () => {
   const{state,dispatch}=useContext(Authcon)
   const[courses,updatedcourses]=useState([])
   const[userid,updateduserid]=useState("")
-
-  
-  
   const path=useNavigate()
+
   useEffect(()=>{
     if(state?.user?.name)
     {
@@ -24,6 +22,16 @@ const Dashboard = () => {
 
   },[state])
 
+  useEffect(()=>{
+    
+    if(courses!="")
+    console.log(courses,"coursssssess")
+
+    
+
+
+  },[courses])
+
 
   useEffect(()=>{
    async  function fetchcourse(){
@@ -32,6 +40,8 @@ const Dashboard = () => {
       const response=await api.post("/course/fetch",{userid})
       if(response.data.success){
         alert(response.data.message)
+        updatedcourses(response.data.idexist)
+        
       }
       
 
@@ -60,6 +70,17 @@ const Dashboard = () => {
     <div>
     <div>dashboard</div>
     <h1>Welcome {state?.user?.name}</h1>
+
+    {courses.map((item)=>(
+      <div style={{border:"2px solid red"}} onClick={()=>(path(`/singlecourse/${item._id}`))}>
+      <h1> Name : {item.name}</h1>
+      <h1> Content : {item.content}</h1>
+      <h1> Instructor : {item.instructor}</h1>
+
+      </div>
+    )
+    
+    )}
 
     <button onClick={tocreateform}>Create</button>
     <button>Edit</button>

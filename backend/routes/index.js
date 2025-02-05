@@ -8,4 +8,5 @@ const routes = Router();
 routes.use('/auth', authRoutes);
 routes.use('/course', courseRoutes  );
 
+
 export default routes;

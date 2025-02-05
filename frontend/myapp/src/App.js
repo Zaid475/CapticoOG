@@ -6,6 +6,7 @@ import Register from './components/register';
 import Login from './components/login';
 import Dashboard from './components/dashboard';
 import Courseform from './components/courseform';
+import Paramsedit from './components/paramsedit';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/dashboard' element={<Dashboard/>}></Route>
         <Route path='/course' element={<Courseform/>}></Route>
+        <Route path='/singlecourse/:id' element={<Paramsedit/>}></Route>
       </Routes>
 
 

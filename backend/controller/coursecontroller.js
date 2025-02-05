@@ -63,3 +63,37 @@ export const Fetchcourses=async(req,res)=>{
 }
 
 }
+
+
+export const Singlecourse=async(req,res)=>{
+    try{
+        const{id}=req.params
+        console.log("params",id)
+        if(!id){
+            return res.json({message:"course missing",success:false})
+        }
+
+        const coursedata=await Course.findById(id)
+        if(!coursedata){
+        return res.json({
+            success:false,
+            message:"course not found"
+        })
+    }
+    
+
+        return res.json({
+            success:true,
+            coursedata
+        })
+    }
+    
+    catch(error){
+        return res.json({
+            message:"oops something went wrong",
+            success:false
+        })
+        
+
+    }
+}
