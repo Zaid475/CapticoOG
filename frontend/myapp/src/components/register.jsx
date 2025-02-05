@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../axios/axios";
+import '../styles/Register.css'
 
 
 function Register() {
@@ -56,7 +57,7 @@ function Register() {
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <label>Name</label>
-        <br />
+        
         <input
           onChange={handleChange}
           type="text"
@@ -64,9 +65,9 @@ function Register() {
           name="name"
           required
         />
-        <br />
+       
         <label>Email</label>
-        <br />
+       
         <input
           onChange={handleChange}
           type="email"
@@ -74,9 +75,9 @@ function Register() {
           name="email"
           required
         />
-        <br />
+        
         <label>Password </label>
-        <br />
+        
         <input
           onChange={handleChange}
           type="password"
@@ -84,9 +85,9 @@ function Register() {
           name="password"
           required
         />
-        <br />
+       
         <label>Confirm Password </label>
-        <br />
+        
         <input
           onChange={handleChange}
           type="password"

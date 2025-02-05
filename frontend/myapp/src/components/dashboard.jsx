@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Authcon } from './usecontext'
 import api from '../axios/axios'
+import '../styles/Dashboard.css'
 
 
 const Dashboard = () => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../axios/axios";
-
+import '../styles/Login.css'
 
 function Login() {
     const path=useNavigate();
@@ -49,14 +49,14 @@ function Login() {
     
 
         return (
-            <div style={{ border: "1px solid black", marginTop: "50px", width: "350px", marginLeft: "500px", height: "200px" }}>
+            <div>
                 <h1>Login Page</h1>
                 <form onSubmit={submit} autoComplete="off">
 
-                    <label>E-mail</label><br></br>
-                    <input onChange={uservalue} autoComplete="new-email" name="email" type="email"></input><br></br>
-                    <label>Password</label><br></br>
-                    <input onChange={uservalue} type="password" name="password" autoComplete="new-password"></input><br></br>
+                    <label>E-mail</label>
+                    <input onChange={uservalue} autoComplete="new-email" name="email" type="email"></input>
+                    <label>Password</label>
+                    <input onChange={uservalue} type="password" name="password" autoComplete="new-password"></input>
                    
                     <input type="submit"></input>
                 </form>

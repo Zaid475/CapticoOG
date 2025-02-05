@@ -1,0 +1,43 @@
+/* Home Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    max-width: 360px;
+    text-align: center;
+}
+
+div > div {
+    font-size: 24px;
+    color: #1c1c1c;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f86a1d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #e45a0a;
+}
+
+button:focus {
+    outline: none;
+}

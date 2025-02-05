@@ -1,0 +1,89 @@
+/* Online Registration Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+div {
+    max-width: 360px;
+    text-align: center;
+}
+  
+img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+}
+  
+h1 {
+    color: #1c1c1c;
+    font-size: 20px;
+    margin: 15px 0 30px;
+}
+  
+form {
+    background-color: #f7faff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced space between elements */
+}
+  
+label {
+    margin-bottom: 5px; /* Reduced space between label and input */
+}
+  
+input[type="text"],
+input[type="email"],
+select {
+    padding: 7px 15px;
+    border: 1px solid #d8e0f0;
+    border-radius: 30px;
+    font-size: 14px;
+    background-color: #f7faff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+  
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #007bff;
+}
+  
+input::placeholder {
+    color: #bfc9e0;
+    font-size: 14px;
+}
+  
+select {
+    appearance: none;
+    background: #f7faff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmZjZDE1IiBzdHJva2Utd2lkdGg9IjEuNSI+PHBhdGggZD0iTTEgNEw4IDExTDE1IDQiLz48L3N2Zz4=') no-repeat right 12px center;
+    background-size: 10px;
+}
+  
+input[type="submit"] {
+    padding: 6px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f86a1d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+  
+input[type="submit"]:hover {
+    background-color: #e45a0a;
+}

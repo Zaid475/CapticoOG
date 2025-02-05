@@ -44,15 +44,15 @@ const Courseform = () => {
   return (
     <div>
         <form onSubmit={submit} autoComplete="off">
+<h1>Course Creation</h1>
+<label>Name</label>
+<input onChange={uservalue} name="name" type="text"></input>
 
-<label>Name</label><br></br>
-<input onChange={uservalue} name="name" type="text"></input><br></br>
+<label>Content</label>
+<input onChange={uservalue} type="text" name="content" ></input>
 
-<label>Content</label><br></br>
-<input onChange={uservalue} type="text" name="content" ></input><br></br>
-
-<label>Instructor</label><br></br>
-<input onChange={uservalue} type="text" name="instructor"></input><br></br>
+<label>Instructor</label>
+<input onChange={uservalue} type="text" name="instructor"></input>
 
 
 <input type="submit"></input>
