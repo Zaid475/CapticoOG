@@ -1,45 +1,86 @@
-/* Centering the dashboard */
-.dashboard-container {
+/* Dashboard Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+div.container {
+    max-width: 800px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    border-radius: 20px;
+    border: 5px solid #ff512f;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.course-card {
+    border: 3px solid #f86a1d;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 10px 0;
+    text-align: left;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    
 }
 
-/* Welcome message styling */
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Buttons styling */
+.course-details {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-details h2 {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #222;
+}
+
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
+    padding: 12px 20px;
     font-size: 16px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin: 10px 5px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #fff;
 }
 
 button:hover {
-    background-color: #0056b3;
-}
-
-button:active {
-    background-color: #003f7f;
-}
-
-/* Dashboard heading */
-.dashboard-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    background: linear-gradient(to right, #dd2476, #ff512f);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }

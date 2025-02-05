@@ -68,11 +68,11 @@ const Dashboard = () => {
   }
   return (
     <div>
-    <div>dashboard</div>
-    <h1>Welcome {state?.user?.name}</h1>
+   
+    <h1 class="course-details">Welcome {state?.user?.name}!</h1>
 
     {courses.map((item)=>(
-      <div style={{border:"2px solid red"}} onClick={()=>(path(`/singlecourse/${item._id}`))}>
+      <div class="course-card"  onClick={()=>(path(`/singlecourse/${item._id}`))}>
       <h1> Name : {item.name}</h1>
       <h1> Content : {item.content}</h1>
       <h1> Instructor : {item.instructor}</h1>

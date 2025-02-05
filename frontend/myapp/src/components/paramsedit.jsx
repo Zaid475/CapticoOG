@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import api from '../axios/axios';
+import '../styles/Singlecourse.css'
+
 
 const Paramsedit = () => {
     const[state,updatestate]=useState({})
@@ -33,10 +35,10 @@ const Paramsedit = () => {
         }
     
   return (
-    <div>
-      <h1>{state.name}</h1>
-      <h1>{state.content}</h1>
-      <h1>{state.instructor}</h1>
+    <div class="container">
+      <h1 class="course-info">Name :{state.name}</h1>
+      <h1 class="course-info">Context :{state.content}</h1>
+      <h1 class="course-info"> Instructor: {state.instructor}</h1>
     </div>
   )
 }
