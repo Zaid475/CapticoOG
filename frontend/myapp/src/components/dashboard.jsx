@@ -86,8 +86,7 @@ const Dashboard = () => {
     </div>
 
     <button onClick={tocreateform}>Create</button>
-    <button>Edit</button>
-    <button>Delete</button>
+    
     
     </div>
   )

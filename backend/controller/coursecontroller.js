@@ -131,3 +131,44 @@ export const Delete=async(req,res)=>{
 
     }
 }
+
+
+
+
+export const Edit=async(req,res)=>{
+    try{
+        const{name,content,instructor}=req.body.course
+        const{id}=req.body
+        console.log("id to be edited",id)
+        console.log("edited course data",name,content,instructor)
+
+       
+
+
+
+
+        
+        
+          
+        return res.json({
+            success:true,
+            message:"Course updated"
+        })
+        
+        
+       
+       
+    
+
+       
+    }
+    
+    catch(error){
+        return res.json({
+            message:"oops something went wrong",
+            success:false
+        })
+        
+
+    }
+}

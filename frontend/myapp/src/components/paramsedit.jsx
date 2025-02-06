@@ -7,6 +7,7 @@ import '../styles/Singlecourse.css'
 const Paramsedit = () => {
     const[state,updatestate]=useState({})
     const path=useNavigate()
+    
 
     const{id}=useParams();
     useEffect(()=>{
@@ -53,6 +54,10 @@ const Paramsedit = () => {
             console.log(error)
         }
         }
+
+        function toedit(){
+          path(`/editcourse/${id}`)
+        }
     
   return (
   <div>
@@ -66,6 +71,8 @@ const Paramsedit = () => {
 
     </div>
     <button onClick={remove}>Delete</button>
+    <button onClick={toedit}>Edit</button>
+
     
     </div>
   )

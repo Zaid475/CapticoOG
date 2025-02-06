@@ -8,6 +8,7 @@ import Dashboard from './components/dashboard';
 import Courseform from './components/courseform';
 import Paramsedit from './components/paramsedit';
 import Todashboard from './components/todashboard';
+import Editcourse from './components/editcourse';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard/>}></Route>
         <Route path='/course' element={<Courseform/>}></Route>
         <Route path='/singlecourse/:id' element={<Paramsedit/>}></Route>
+        <Route path='/editcourse/:id' element={<Editcourse/>}></Route>
       </Routes>
 
 
