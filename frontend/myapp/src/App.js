@@ -7,11 +7,13 @@ import Login from './components/login';
 import Dashboard from './components/dashboard';
 import Courseform from './components/courseform';
 import Paramsedit from './components/paramsedit';
+import Todashboard from './components/todashboard';
 
 
 function App() {
   return (
     <div className="App">
+     
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/register' element={<Register/>}></Route>

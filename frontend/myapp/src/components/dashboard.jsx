@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Authcon } from './usecontext'
 import api from '../axios/axios'
 import '../styles/Dashboard.css'
+import Home from './home'
 
 
 const Dashboard = () => {
@@ -70,21 +71,24 @@ const Dashboard = () => {
     <div>
    
     <h1 class="course-details">Welcome {state?.user?.name}!</h1>
-
+    <div >
     {courses.map((item)=>(
       <div class="course-card"  onClick={()=>(path(`/singlecourse/${item._id}`))}>
       <h1> Name : {item.name}</h1>
       <h1> Content : {item.content}</h1>
       <h1> Instructor : {item.instructor}</h1>
+      
 
       </div>
     )
     
     )}
+    </div>
 
     <button onClick={tocreateform}>Create</button>
     <button>Edit</button>
     <button>Delete</button>
+    
     </div>
   )
 }

@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { Authcon } from './usecontext'
 import api from '../axios/axios'
+import { useNavigate } from 'react-router-dom'
 
 
 
 const Courseform = () => {
-
+    const path=useNavigate()
     const {state,dispatch}=useContext(Authcon)
 
     const[course,updatecourse]=useState({
@@ -27,6 +28,7 @@ const Courseform = () => {
             const response=await api.post("/course/create",{course})
             if(response.data.success){
                 alert(response.data.message)
+                path("/dashboard")
             }
             else{
                 alert(response.data.message)
@@ -43,6 +45,9 @@ const Courseform = () => {
     }
   return (
     <div>
+        <button onClick={()=>{path("/")}}>HOME</button>
+        <button onClick={()=>{path("/dashboard")}}>DASHBOARD</button>
+
         <form onSubmit={submit} autoComplete="off">
 <h1>Course Creation</h1>
 <label>Name</label>

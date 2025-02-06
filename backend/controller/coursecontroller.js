@@ -46,7 +46,7 @@ export const Fetchcourses=async(req,res)=>{
         const idexist=await Course.find({userid:userid})
         if(idexist){
             
-            console.log(idexist[1],"abc")
+            console.log(idexist,"abc")
         }
         return res.json({
             success:true,
@@ -86,6 +86,40 @@ export const Singlecourse=async(req,res)=>{
             success:true,
             coursedata
         })
+    }
+    
+    catch(error){
+        return res.json({
+            message:"oops something went wrong",
+            success:false
+        })
+        
+
+    }
+}
+
+
+
+
+export const Delete=async(req,res)=>{
+    try{
+        const{id}=req.body
+        console.log("deleted id is",id)
+
+        const idexist=await Course.deleteOne({_id:id})
+        
+          
+        return res.json({
+            success:true,
+            message:"Course deleted"
+        })
+        
+        
+       
+       
+    
+
+       
     }
     
     catch(error){
