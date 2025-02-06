@@ -39,7 +39,7 @@ const Dashboard = () => {
     try{
       const response=await api.post("/course/fetch",{userid})
       if(response.data.success){
-        alert(response.data.message)
+        // alert(response.data.message)
         updatedcourses(response.data.idexist)
         
       }
