@@ -58,10 +58,18 @@ const Paramsedit = () => {
         function toedit(){
           path(`/editcourse/${id}`)
         }
+
+        function dash(){
+          path('/dashboard')
+        }
+
+      
     
   return (
   <div>
-    <h1>{state.name} course</h1>
+    <button onClick={dash}>Dashboard</button>
+    
+    <h1 style={{color:"red"}}>{state.name} course</h1>
     
     <div class="container">
       

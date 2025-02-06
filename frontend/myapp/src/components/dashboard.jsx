@@ -67,11 +67,16 @@ const Dashboard = () => {
   function tocreateform(){
     path('/course')
   }
+
+    function home(){
+          path('/')
+        }
+
   return (
     <div>
-   
+    <button onClick={home}>Home</button>
     <h1 class="course-details">Welcome {state?.user?.name}!</h1>
-    <div >
+    <div>
     {courses.map((item)=>(
       <div class="course-card"  onClick={()=>(path(`/singlecourse/${item._id}`))}>
       <h1> Name : {item.name}</h1>

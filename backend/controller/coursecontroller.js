@@ -142,7 +142,12 @@ export const Edit=async(req,res)=>{
         console.log("id to be edited",id)
         console.log("edited course data",name,content,instructor)
 
-       
+        const response=await Course.updateOne({_id:id},{ 
+            $set: { 
+              name: name, 
+              content: content,
+              instructor:instructor 
+            } })
 
 
 

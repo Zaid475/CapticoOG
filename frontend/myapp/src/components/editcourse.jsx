@@ -24,7 +24,7 @@ const Editcourse = () => {
             const response=await api.put("/course/edit",{course,id})
             if(response.data.success){
                 alert(response.data.message)
-                path("/dasboard")
+                path("/dashboard")
                
             }
             else{
